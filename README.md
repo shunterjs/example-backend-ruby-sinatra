@@ -6,11 +6,12 @@ A Ruby and Sinatra-based back end for the [Shunter example application](https://
 
 ## Requirements
 
-`Ruby 2.2.2+`
+`Ruby 1.9.3+`
 
 ## Installation
 
 ```
+cp .ruby-version.sample .ruby-version
 gem install sinatra
 ```
 

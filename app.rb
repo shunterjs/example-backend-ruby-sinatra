@@ -25,8 +25,8 @@ end
 private
 
 def show_all
-  layout = { "template": "home" }
-  data   = { "title":  "Lunch Places", "venues": DATA }
+  layout = { "template" => "home" }
+  data   = { "title" =>  "Lunch Places", "venues" => DATA }
 
   build_response(layout, data)
 end
@@ -35,8 +35,8 @@ def find_venue(slug)
   venue = DATA.detect {|h| h[:slug] == slug }
   return not_found unless venue
 
-  layout = { "template": "venue" }
-  data   = { "title": "#{venue[:name]} - Lunch Places", "venue": venue }
+  layout = { "template" => "venue" }
+  data   = { "title" => "#{venue[:name]} - Lunch Places", "venue" => venue }
 
   build_response(layout, data)
 end
@@ -58,8 +58,8 @@ end
 
 def build_response(layout, data)
   response = {
-    "layout": layout,
-    "data":   data
+    "layout" => layout,
+    "data"   => data
   }
 
   content_type 'application/x-shunter+json', 'charset' => 'utf-8'
